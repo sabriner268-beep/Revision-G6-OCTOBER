@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- منع ترجمة المتصفحات التلقائية -->
+  <meta name="google" content="notranslate" />
+  <meta name="googlebot" content="notranslate" />
+
+  <title>ICT Grade 6 Comprehensive Quiz - By Ms. Sabreen 💻✨</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif; }
+    .shake-anim { animation: shake 0.4s ease-in-out; }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+
+    .teacher-watermark {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.04;
+      transform: rotate(-25deg);
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #0f172a;
+      white-space: nowrap;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-amber-100 via-rose-50 to-sky-100 min-h-screen flex flex-col items-center justify-center p-3 sm:p-6 text-slate-800 relative select-none notranslate" translate="no">
+
+  <div class="w-full max-w-2xl bg-white/95 rounded-3xl border-4 border-white shadow-2xl p-6 sm:p-8 relative overflow-hidden notranslate" translate="no">
+    <div class="teacher-watermark">مس صابرين • Ms. Sabreen</div>
+    <div class="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-amber-400 via-pink-400 to-sky-400 z-10"></div>
+
+    <!-- شاشة إغلاق الكويز التلقائية (تظهر إذا كُتب CLOSED في الشيت) -->
+    <div id="closed-screen" class="hidden space-y-6 text-center py-6 relative z-10">
+      <div class="w-40 h-40 mx-auto rounded-full border-4 border-rose-300 shadow-xl overflow-hidden bg-rose-50">
+        <img src="https://i.postimg.cc/DzH5SBDF/swrty-krtwn.png" class="w-full h-full object-cover object-top" alt="مس صابرين">
+      </div>
+      <div class="space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-black text-rose-600">الاختبار مغلق حالياً 🔒</h2>
+        <p class="text-slate-600 font-bold text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+          عفواً يا بطل، انتهى موعد الاختبار وتم إغلاق استقبال الإجابات بواسطة <span class="text-indigo-600 font-extrabold">مس صابرين</span>.
+        </p>
+      </div>
+      <div class="inline-block bg-rose-50 border border-rose-200 text-rose-700 text-xs font-black px-4 py-2 rounded-xl">
+        تواصل مع المعلمة في حال وجود أي استفسار ✨
+      </div>
+    </div>
+
+    <!-- 1. شاشة البداية -->
+    <div id="start-screen" class="space-y-5 text-center py-2 relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-black shadow-sm">
+        <span>👩‍🏫 إعداد وتصميم: مس صابرين (Ms. Sabreen)</span>
+      </div>
+
+      <div class="w-36 h-36 sm:w-40 sm:h-40 mx-auto rounded-full border-4 border-amber-300 shadow-xl overflow-hidden bg-amber-50">
+        <img id="intro-media" src="https://i.postimg.cc/DzH5SBDF/swrty-krtwn.png" class="w-full h-full object-cover object-top" alt="المعلمة مس صابرين">
+      </div>
+
+      <div>
+        <h1 id="quiz-main-title" class="text-2xl sm:text-3xl font-black text-slate-800 notranslate" translate="no">ICT Grade 6 Revision Quiz! 💻✨</h1>
+        <p class="text-slate-500 font-bold text-sm sm:text-base mt-1">مستعدون للتحدي يا أبطال مع مس صابرين للحصول على الدرجة الكاملة؟</p>
+      </div>
+
+      <div class="max-w-md mx-auto space-y-3 pt-1 text-left" dir="auto">
+        <div>
+          <label for="student-name" class="block text-sm font-extrabold text-slate-700 mb-1">Enter your name / أدخل اسمك: <span class="text-rose-500">*</span></label>
+          <input type="text" id="student-name" placeholder="مثال: عاصم محمد، مريم أحمد..." class="w-full px-4 py-3 rounded-2xl bg-slate-50 border-2 border-slate-200 text-slate-800 text-sm sm:text-base font-bold shadow-inner focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <div>
+          <label for="student-grade" class="block text-sm font-extrabold text-slate-700 mb-1">Enter your class & grade / أدخل الصف أو الفصل: <span class="text-rose-500">*</span></label>
+          <input type="text" id="student-grade" placeholder="مثال: سادس أول (6/1)، Grade 6A..." class="w-full px-4 py-3 rounded-2xl bg-slate-50 border-2 border-slate-200 text-slate-800 text-sm sm:text-base font-bold shadow-inner focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <p id="input-error" class="hidden text-xs text-rose-500 font-bold text-center">يرجى كتابة اسمك والصف أولاً للبدء!</p>
+
+        <button onclick="startQuiz()" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 hover:from-amber-500 hover:to-rose-500 text-white font-black text-lg shadow-lg shadow-amber-300/50 transform active:scale-95 transition cursor-pointer mt-2">
+          ابدأ الاختبار 🚀 Start Quiz
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. شاشة الأسئلة -->
+    <div id="quiz-screen" class="hidden space-y-5 relative z-10">
+      <div class="flex items-center justify-between bg-slate-50 p-3.5 sm:p-4 rounded-2xl border-2 border-slate-100 relative">
+        <div class="flex items-center gap-3 sm:gap-4 relative z-10">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border-2 border-amber-300 overflow-hidden bg-amber-50 shrink-0 shadow-md">
+            <img id="live-media" src="https://i.postimg.cc/DzH5SBDF/swrty-krtwn.png" class="w-full h-full object-cover object-top" alt="المعلمة مس صابرين">
+          </div>
+          <div>
+            <div id="reaction-message" class="text-sm sm:text-base font-black text-slate-700">فكّر جيداً قبل الاختيار! 💡</div>
+            <div class="flex items-center gap-2 mt-1 flex-wrap">
+              <span id="student-display-tag" class="text-xs text-slate-600 font-extrabold bg-white px-2 py-0.5 rounded-md border border-slate-200 shadow-sm"></span>
+              <span id="grade-display
